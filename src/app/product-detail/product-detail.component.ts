@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
 
   products: Product[]=[
+    new Product(0,'Product 000'),
     new Product(1,'Product 001'),
     new Product(2,'Product 002'),
     new Product(3,'Product 003'),
@@ -21,7 +22,7 @@ export class ProductDetailComponent implements OnInit {
     
   ];
 
-  product: Product = this.products[1];
+  product: Product = this.products[0];
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
