@@ -9,6 +9,8 @@ import { ProductListSidebarComponent } from './product-list-sidebar/product-list
 import { ProductListComponent } from './product-list/product-list.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

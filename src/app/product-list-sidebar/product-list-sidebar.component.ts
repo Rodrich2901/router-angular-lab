@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../service/product.service';
+
 
 @Component({
   selector: 'app-product-list-sidebar',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list-sidebar.component.css']
 })
 export class ProductListSidebarComponent implements OnInit {
-
-  constructor() { }
+  products = null; 
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.productService.getProducts()
+    .subscribe(result=>this.products=result);
   }
 
 }
